@@ -9,6 +9,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+const url = process.env.MONGO_URL; // accessed from  from .env file
+
 // prevent warnings from Mongo
 const options = {
   useNewUrlParser: true,
